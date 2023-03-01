@@ -1,7 +1,10 @@
 import { movies } from "./../movies";
+import { useSelector } from "react-redux";
 
 export default function Movie(props) {
-  const movie = movies[props.sira];
+  
+  const movieIndex=useSelector(state=>state.movieIndex);
+  const movie = movies[movieIndex];//store ile değişecek
 
   return (
     <div className="flex bg-white shadow-lg items-start">
