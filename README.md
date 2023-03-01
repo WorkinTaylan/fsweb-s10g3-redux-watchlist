@@ -33,13 +33,13 @@ Proje `movies.js` dosyasında yer alan filmleri sırayla görüntüleyebildiğin
     --->Movie.js için movies;
     --->FavMovie.js için favorites; 
 
-* [ ] Proje içerisinde store içerisindeki veriyi hangi fonksiyonlarla değiştirmeniz gerekecek? Düşünün ve reducerınızı oluşturmaya başlayın.
+* [*] Proje içerisinde store içerisindeki veriyi hangi fonksiyonlarla değiştirmeniz gerekecek? Düşünün ve reducerınızı oluşturmaya başlayın.
 
-* [ ] **`store`** oluşturmanın vakti geldi. Tüm uygulamanızı kapsayacak şekilde bir store oluşturun.
+* [*] **`store`** oluşturmanın vakti geldi. Tüm uygulamanızı kapsayacak şekilde bir store oluşturun.
 
-* [ ] Store içerisinde duran veriler projede nerede kullanılacak? **`useSelector`** hooku ile store içerisinden gerekli verileri alın ve ilgili yerlerde kullanın.
+* [*] Store içerisinde duran veriler projede nerede kullanılacak? **`useSelector`** hooku ile store içerisinden gerekli verileri alın ve ilgili yerlerde kullanın.
 
-* [ ] Artık `action`larla çalışmaya hazırız. Hangi actionlar olmalı, hangi kısımlarda tetiklenmeli? İlgili yerlerde bu actionları **`dispatch`** edin.
+* [*] Artık `action`larla çalışmaya hazırız. Hangi actionlar olmalı, hangi kısımlarda tetiklenmeli? İlgili yerlerde bu actionları **`dispatch`** edin.
 
 ### Görev 3: Projeye redux-logger eklemek
 

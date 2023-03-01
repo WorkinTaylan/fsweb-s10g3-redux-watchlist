@@ -5,11 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter } from "react-router-dom";
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
-import train from './components/reducers/movieReducer';
+import logger from 'redux-logger'
+import rootReducer from "./components/reducers/index";
 
-const store=createStore(train)
+
+
+const store=createStore(rootReducer, applyMiddleware(logger))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 export default function Movie(props) {
   
-  const movieIndex=useSelector(state=>state.movieIndex);
+  const movieIndex=useSelector(state=>state.movieReducer.movieIndex);
   const movie = movies[movieIndex];//store ile değişecek
 
   return (

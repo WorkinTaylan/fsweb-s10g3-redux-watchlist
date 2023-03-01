@@ -3,7 +3,7 @@ import {NEXT_MOVIE} from "../actions/movieActions";
 
 const initialState={
     movies:movies,
-    movieIndex:0
+    movieIndex:0,
 }
 
 const train=(state=initialState, action)=>{
@@ -13,6 +13,7 @@ const train=(state=initialState, action)=>{
                 ...state,
                 movieIndex:state.movieIndex+1  
             };
+            
         default:
             return state;
     }
