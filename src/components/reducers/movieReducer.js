@@ -1,5 +1,5 @@
 import { movies } from "../../movies";
-import {NEXT_MOVIE} from "../actions/movieActions";
+import {NEXT_MOVIE, PREVIOUS, INITIAL} from "../actions/movieActions";
 
 const initialState={
     movies:movies,
@@ -13,7 +13,20 @@ const train=(state=initialState, action)=>{
                 ...state,
                 movieIndex:state.movieIndex+1  
             };
-            
+        case PREVIOUS:
+            if (state.movieIndex===0){
+                return state;
+            }
+            else {
+                return{...state,
+                movieIndex:state.movieIndex-1
+                
+            }
+        }
+        case INITIAL:
+            return{
+               movieIndex:0
+            }        
         default:
             return state;
     }

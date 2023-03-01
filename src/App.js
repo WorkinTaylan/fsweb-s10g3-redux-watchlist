@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Switch, Route, NavLink } from "react-router-dom";
 import Movie from "./components/Movie";
 import FavMovie from "./components/FavMovie";
 import { useDispatch } from "react-redux";
-import { AddWatchList, NextMovie } from "./components/actions/movieActions";
+import { initial, NextMovie, previous } from "./components/actions/movieActions";
 import { movies } from "./movies";
 import { addList } from "./components/actions/FavAction";
 
@@ -16,6 +15,8 @@ function App() {
   const movie = movies[movieIndex]
   const dispatch= useDispatch();
 
+
+  
 
   return (
     <div className="wrapper max-w-2xl mx-auto">
@@ -30,9 +31,21 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Movie sira={movieIndex} />
+          <div className="flex gap-3 justify-end py-3">
+            <button
+              onClick={()=>{dispatch(initial())}}
+              className="select-none px-4 py-2 border border-blue-700 text-blue-700 hover:border-blue-500 hover:text-blue-500"
+            >
+              Başa Dön
+            </button>
+            <button disabled={movieIndex === 0} onClick={()=>{dispatch(previous())}} className="select-none px-4 py-2 bg-blue-700 hover:bg-blue-600 text-white">
+              Önceki
+            </button>
+          </div>
 
           <div className="flex gap-3 justify-end py-3">
             <button
+            disabled={movieIndex===movies.length-1}
               onClick={()=>{dispatch(NextMovie())}}
               className="select-none px-4 py-2 border border-blue-700 text-blue-700 hover:border-blue-500 hover:text-blue-500"
             >

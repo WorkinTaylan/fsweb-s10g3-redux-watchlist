@@ -13,6 +13,13 @@ code {
     monospace;
 }
 
+button:disabled{
+  text-decoration: none;
+  color:white;
+  background-color: white;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
