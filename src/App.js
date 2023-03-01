@@ -31,7 +31,8 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Movie sira={movieIndex} />
-          <div className="flex gap-3 justify-end py-3">
+          <div className="flex justify-between">
+          <div className="flex gap-3 justify-start py-3">
             <button
               onClick={()=>{dispatch(initial())}}
               className="select-none px-4 py-2 border border-blue-700 text-blue-700 hover:border-blue-500 hover:text-blue-500"
@@ -55,7 +56,9 @@ function App() {
               Listeme ekle
             </button>
           </div>
+          </div>
         </Route>
+       
 
         <Route path="/listem">
           <div>
